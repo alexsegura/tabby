@@ -1,21 +1,19 @@
 /**
- *
- * Tabby v7.1.0
- * Simple, mobile-first toggle tabs by Chris Ferdinandi.
- * http://gomakethings.com
- *
+ * Tabby v7.2.0
+ * Simple, mobile-first toggle tabs., by Chris Ferdinandi.
+ * http://github.com/cferdinandi/tabby
+ * 
  * Free to use under the MIT License.
  * http://gomakethings.com/mit/
- *
  */
 
 (function (root, factory) {
 	if ( typeof define === 'function' && define.amd ) {
-		define(factory);
+		define('tabby', factory(root));
 	} else if ( typeof exports === 'object' ) {
-		module.exports = factory;
+		module.exports = factory(root);
 	} else {
-		root.tabby = factory(root); // @todo Update to plugin name
+		root.tabby = factory(root);
 	}
 })(this, function (root) {
 
